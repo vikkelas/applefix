@@ -1,0 +1,10 @@
+@use 'sass:math'
+@function width1900($n)
+  @return $n*math.div(100vw,1900)
+
+@mixin title($color)
+  color: $color
+  font-family: Adderley,sans-serif
+  text-transform: uppercase
+  font-size: width1900(40)
+  line-height: width1900(40)

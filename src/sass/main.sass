@@ -1,0 +1,635 @@
+@import "fonts"
+@import mixin
+@import resetCss
+
+body
+  position: relative
+  min-height: 100vh
+  font-family: Verano500,sans-serif
+  color: #142340
+  font-size: width1900(20)
+  .title
+    @include title(#142340)
+  .container
+    margin: 0 auto
+    height: 100vh
+    max-width: width1900(1780)
+    display: grid
+    gap: width1900(35) 0
+    grid-template-columns: width1900(270) width1900(1440)
+    grid-template-rows: repeat(2,auto)
+    justify-content: space-between
+    align-content: flex-start
+  .header
+    width: 100%
+    grid-column: 2/3
+    grid-row: 1/2
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: width1900(46)
+    &IconsContainer
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &Arrow
+        margin-right: width1900(35)
+        margin-left: width1900(14)
+        width: width1900(50)
+        display: flex
+        align-items: center
+        justify-content: center
+        svg
+          width: 100%
+          height: 100%
+      &BoxIcons
+        display: flex
+        gap: 0 width1900(35)
+        &Link
+          width: width1900(32)
+          height: width1900(32)
+          img
+            width: 100%
+            height: 100%
+  .toolbar
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    gap: width1900(55) 0
+    width: width1900(271)
+    max-height: width1900(710)
+    padding: width1900(40)0
+    margin-left: width1900(60)
+    &BoxLogo
+      padding-left: width1900(22)
+      img
+        width: width1900(210)
+        height: auto
+      span
+        display: inline-block
+        font-family: Verano400,sans-serif
+        font-size: width1900(14)
+        line-height: width1900(18)
+    &Nav
+      &List
+        display: flex
+        flex-direction: column
+        &Item
+          cursor: pointer
+          width: width1900(243)
+          padding: width1900(14) 0 width1900(14) width1900(22)
+          border-radius: width1900(8)
+          &Link
+            display: flex
+            align-items: center
+            &Icon
+              display: flex
+              align-items: center
+              justify-content: center
+              width: width1900(24)
+              height: width1900(24)
+              svg
+                width: 100%
+                height: 100%
+            span
+              display: inline-block
+              margin-left: width1900(11)
+        &Item-active
+          background-color: #4891FF
+          transition: background-color 0.4s ease-in-out
+        &Item-active
+          span
+            color: #FFFFFF !important
+        &Item-active
+          svg
+            path
+              stroke: #FFFFFF !important
+    &Contacts
+      width: 100%
+      display: flex
+      flex-direction: column
+      background-color: #ECF4FF
+      border-radius: width1900(8)
+      gap: width1900(13) 0
+      padding: width1900(30) width1900(22)
+      &Address
+        font-size: width1900(16)
+        line-height: width1900(19)
+        span
+          font-family: Verano600,sans-serif
+          color: #35599E
+      &Tel
+        font-family: Verano600,sans-serif
+  .main
+    grid-column: 2/3
+    grid-row: 2/3
+    display: flex
+    flex-direction: column
+    gap: width1900(40) 0
+    &Container
+      display: flex
+      justify-content: space-between
+      &SmallItem
+        width: width1900(600)
+      &BigItem
+        width: width1900(800)
+      &SmallItem,
+      &BigItem
+        display: flex
+        height: width1900(400)
+        position: relative
+        border-radius: width1900(8)
+        overflow: hidden
+        a
+          cursor: pointer
+        &Title
+          position: absolute
+          bottom: 0
+          right: 0
+          padding: width1900(15) width1900(30)
+          background-color: rgba(0, 0, 0, 0.5)
+          border-radius: width1900(8)
+          @include title(#FFFFFF)
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+      &TextBox
+        display: flex
+        flex-direction: column
+        background-color: #ECF4FF
+        border-radius: width1900(8)
+        gap: width1900(20) 0
+        padding: width1900(30) width1900(40)
+        &Title
+          @include title(#142340)
+        &List
+          display: flex
+          flex-direction: column
+          gap: width1900(20) 0
+          &Item
+            a:hover
+              color: #1C6DD1
+            &InfoBox
+              margin-top: width1900(10)
+              width: width1900(204)
+              display: flex
+              justify-content: space-between
+              gap: 0 width1900(21)
+              &Item
+                display: flex
+                align-items: center
+                img
+                  width: width1900(16)
+                  height: width1900(16)
+                span
+                  color: #636F88
+                  font-size: width1900(16)
+                  margin-left: width1900(7)
+                  display: inline-block
+  .mainStore
+    position: relative
+    grid-column: 2/3
+    grid-row: 2/4
+    &Header
+      display: flex
+      justify-content: space-between
+      height: width1900(400)
+      &Background
+        overflow: hidden
+        position: relative
+        width: width1900(800)
+        border-radius: width1900(8)
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+        h2
+          position: absolute
+          bottom: 0
+          right: 0
+          border-radius: width1900(8)
+          @include title(#FFFFFF)
+          padding: width1900(15) width1900(30)
+          background-color: rgba(0, 0, 0, 0.5)
+      &Info
+        width: width1900(600)
+        height: 100%
+        display: flex
+        flex-direction: column
+        gap: width1900(20) 0
+        border-radius: width1900(8)
+        padding: width1900(30) width1900(40)
+        background-color: #ECF4FF
+        h2
+          @include title(#142340)
+        &Text
+          font-family: Verano400,sans-serif
+          font-size: width1900(20)
+          line-height: width1900(24)
+          display: flex
+          flex-direction: column
+          gap: width1900(15) 0
+          p
+            display: inline-block
+    &FiltersBox
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin-top: width1900(40)
+      gap: width1900(30) 0
+      font-family: Verano500,sans-serif
+      &Type
+        display: flex
+        gap: 0 width1900(20)
+        &Item
+          cursor: pointer
+          font-size: width1900(22)
+          border-radius: width1900(8)
+          padding: width1900(8) width1900(20)
+          color: #142340
+          background-color: #ECF4FF
+          &Active
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out
+            background-color: #4891FF
+            color: #FFFFFF
+      &Device
+        display: grid
+        grid-template-columns: repeat(3,auto)
+        align-items: center
+        span
+          padding-top: width1900(8)
+          grid-column: 1/2
+          grid-row: 1/2
+          display: inline-block
+          font-family: Verano600,sans-serif
+          color: #4891FF
+        img
+          padding-top: width1900(8)
+          margin-left: width1900(14)
+          margin-right: width1900(20)
+          grid-column: 2/3
+          grid-row: 1/2
+          width: width1900(54)
+          height: auto
+        &List
+          grid-column: 3/4
+          grid-row: 1/3
+          display: flex
+          flex-wrap: wrap
+          gap: width1900(20)
+          &Item
+            cursor: pointer
+            border: 1px solid #4891FF
+            border-radius: width1900(8)
+            padding: width1900(8) width1900(13)
+            &Active
+              color: #FFFFFF
+              background-color: #4891FF
+              transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out
+    &Card
+      margin-top: width1900(40)
+      &Device
+        display: flex
+        flex-direction: column
+        gap: width1900(30) 0
+        &Title
+          font-family: Verano800,sans-serif
+          font-size: width1900(32)
+          line-height: width1900(38)
+        &Main
+          background-color: #F5F5F7
+          width: 100%
+          display: grid
+          grid-template-columns: width1900(445) auto width1900(560)
+          border-radius: width1900(8)
+          padding: width1900(35)
+          &Gallery
+            display: flex
+            flex-direction: column
+            &View
+              height: width1900(394)
+              img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+            &Preview
+              width: 100%
+              height: width1900(74)
+              display: flex
+              justify-content: space-around
+              overflow: hidden
+              gap: 0 width1900(10)
+              &Img
+                border: 1px solid #ECECEC
+                border-radius: width1900(4)
+                cursor: pointer
+                object-fit: cover
+                height: 100%
+                width: width1900(84)
+                &Active
+                  border-color: #BCD7FF
+          &Price
+            display: flex
+            flex-direction: column
+            &Title
+              font-family: Verano800,sans-serif
+            &Group
+              margin-top: width1900(20)
+              display: flex
+              flex-direction: column
+              gap: width1900(15)
+              &List
+                &Item
+                  display: flex
+                  align-items: center
+                  img
+                    margin-left: width1900(5)
+                    width: width1900(20)
+                    height: auto
+          &Order
+            display: flex
+            flex-direction: column
+            gap: width1900(35) 0
+            &Description
+              display: flex
+              flex-direction: column
+              gap: width1900(20)
+              &Title
+                font-family: Verano800,sans-serif
+              &Info
+                display: flex
+                flex-direction: column
+                gap: width1900(15) 0
+                p
+                  display: inline-block
+            &Form
+              display: flex
+              flex-direction: column
+              gap: width1900(20) 0
+              &Title
+                font-family: Verano800,sans-serif
+                color: #4891FF
+              &Container
+                display: flex
+                flex-direction: column
+                gap: width1900(15)
+                &Param
+                  display: flex
+                  flex-direction: column
+                  gap: width1900(10) 0
+                  span
+                    display: inline-block
+                    font-size: width1900(14)
+                  &List
+                    display: grid
+                    grid-template-columns: width1900(200) width1900(170)
+                    gap: 0 width1900(20)
+                    &Item
+                      outline: none
+                      width: 100%
+                      font-size: width1900(16)
+                      color: rgba(20, 35, 64)
+                      padding: width1900(10) width1900(15)
+                      border-radius: width1900(8)
+                      border: 1px solid #BCD7FF
+              &Button
+                width: 100%
+                display: flex
+                justify-content: space-between
+                button
+                  cursor: pointer
+                  display: block
+                  outline: none
+                  border: none
+                  color: #FFFFFF
+                  font-family: Verano800,sans-serif
+                  font-size: width1900(16)
+                  background-color: #86BB42
+                  padding: width1900(10) width1900(20)
+                  border-radius: width1900(8)
+                p
+                  width: width1900(379)
+                  display: inline-block
+                  font-size: width1900(14)
+                  a
+                    color: #4891FF
+    &Benefits
+      margin-top: width1900(100)
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: width1900(70) 0
+      &Title
+        font-family: Verano800,sans-serif
+        font-size: width1900(32)
+      &List
+        display: grid
+        justify-content: center
+        grid-template-columns: repeat(3,width1900(368))
+        gap: 0 width1900(100)
+        &Item
+          display: flex
+          flex-direction: column
+          align-items: center
+          img
+            width: auto
+            height: width1900(100)
+          h3
+            font-family: Verano800,sans-serif
+            color: #4891FF
+            margin-top: width1900(35)
+          p
+            display: inline-block
+            margin-top: width1900(20)
+            text-align: center
+    &Accordion
+      margin: width1900(100) auto 0
+      width: width1900(950)
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: width1900(60) 0
+      &Title
+        font-family: Verano800,sans-serif
+        font-size: width1900(32)
+      &List
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: width1900(30) 0
+        &Item
+          overflow: hidden
+          cursor: pointer
+          padding: width1900(20) width1900(25)
+          border-radius: width1900(8)
+          border: 1px solid #F5F5F7
+          display: flex
+          flex-direction: column
+          &Header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            h3
+              font-family: Verano800,sans-serif
+            img
+              width: width1900(12)
+              height: auto
+              transform: rotateX(180deg)
+          p
+            display: inline-block
+            opacity: 0
+            height: 0
+            margin-top: 0
+            max-width: width1900(860)
+            line-height: width1900(26)
+            transition-property: height,opacity,margin-top
+            transition-duration: 0.7s
+            transition-timing-function: ease
+          &Active
+            background-color: #F5F5F7
+          &Active>div>img
+            transform: rotateX(0)
+            transition: transform 0.5s linear
+          &Active>p
+            margin-top: width1900(12)
+            opacity: 1
+            height: auto
+      &Last
+        display: flex
+        flex-direction: column
+        align-items: center
+        p
+          a
+            color: #4891FF
+    &Price
+      margin: width1900(60) auto 0
+      width: width1900(950)
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: width1900(40) 0
+      &Title
+        font-family: Verano800,sans-serif
+        font-size: width1900(32)
+      &Main
+        width: 100%
+        &List
+          width: 100%
+          display: flex
+          flex-direction: column
+          gap: width1900(15) 0
+          &Item
+            width: 100%
+            padding-bottom: width1900(10)
+            border-bottom: 1px solid rgba(72, 145, 255, 0.5)
+            display: flex
+            justify-content: space-between
+            &Text
+              display: flex
+              flex-direction: column
+              gap: width1900(5)
+              h3
+                span
+                  font-family: Verano400,sans-serif
+                  color: #4891FF
+              p
+                font-family: Verano400,sans-serif
+                font-size: width1900(16)
+                color: #656C7B
+            &Count
+              display: flex
+              flex-direction: column
+              align-items: flex-end
+              &Green
+                display: flex
+                align-items: center
+                gap: 0 width1900(7)
+                color: #86BB42
+                img
+                  width: width1900(16)
+                  height: auto
+                span
+                  font-size: width1900(16)
+          &Visible
+            transition-property: margin-top,opacity,height
+            transition-duration: .3s
+            transition-timing-function: ease
+            height: auto
+            opacity: 1
+            margin-top: width1900(15)
+          &Hidden
+            transition-property: margin-top,opacity,height
+            transition-duration: .3s
+            transition-timing-function: ease
+            margin-top: 0
+            height: 0
+            opacity: 0
+          &Visible>li
+            &:nth-child(5)
+              border-bottom: none
+      &Btn
+        position: relative
+        z-index: 10
+        cursor: pointer
+        display: flex
+        align-items: center
+        padding: 0 width1900(18)
+        border: 1px solid #4891FF
+        border-radius: width1900(8)
+        img
+          pointer-events: none
+          margin: width1900(10) 0 width1900(10) width1900(15)
+          width: width1900(24)
+          height: auto
+          transition: transform .8s linear
+          transform: rotateX(0)
+        &Up
+          display: none
+
+
+.formInputSuccess
+  border-color: #86BB42 !important
+.formInputError
+  border-color: red !important
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
